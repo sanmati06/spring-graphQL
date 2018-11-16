@@ -1,0 +1,128 @@
+1)
+
+POST: http://localhost:8085/addPerson
+
+MIME type: application/json
+--------------------------
+body :  
+-------
+
+
+
+[{
+
+	"id":1234,
+	
+	"name":"sanmati",
+	
+	"mobile":908990089,
+	
+	"email":"sanmati@yahoo.com",
+	
+	"address":["Estonia","Olive Courtyard","Kochi"]
+
+},
+
+{
+	
+	"id":4321,
+	
+	"name":"Akash",
+	
+	"mobile":987676767,
+	
+	"email":"akash@gmail.com",
+	
+	"address":["Estonia","Olive Courtyard","Kochi"]
+
+},
+
+{
+	
+	"id":2456,
+	
+	"name":"misba",
+	
+	"mobile":987676767,
+	
+	"email":"misba@gmail.com",
+	
+	"address":["Estonia","Olive Courtyard","Kochi"]
+
+}]
+
+
+-----------------------------------------------------------------------------
+2)
+
+ GET : http://localhost:8085/findAllPerson
+
+-----------------------------------------------------------------------------
+3)
+ 
+POST: http://localhost:8085/getAll
+
+MIME type: tEXT
+---------------
+body:
+-----
+
+
+
+
+   {
+	
+	getAllPerson {
+		
+		name
+		
+		address
+
+        }
+
+   }
+
+------------------------------------------------------------------------------
+4)
+POST : http://localhost:8085/getPersonByEmail
+
+MIME type: tEXT
+---------------
+body:
+-----
+
+
+{
+   
+    findPerson(email:"misba@gmail.com") {
+	
+      	 id
+	
+     	 name
+	
+    	 address
+
+
+	
+    }
+
+}
+
+------------------------------------------------------------------------------
+5)
+
+POST: http://localhost:8085/deletePersonById
+
+
+MIME type: tEXT
+---------------
+body:
+-----
+
+
+{
+    
+	deletePerson(id:1234)
+
+}
+
